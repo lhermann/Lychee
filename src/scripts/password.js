@@ -10,9 +10,11 @@ password = {
 
 password.get = function(albumID, callback) {
 
-	if (lychee.publicMode===false)                                  callback()
-	else if (album.json && album.json.password==='0')               callback()
-	else if (albums.json && albums.getByID(albumID).password==='0') callback()
+    var temp = albums.getByID(albumID); // cache album information
+
+	if (lychee.publicMode===false)                     callback()
+	else if (album.json && album.json.password==='0')  callback()
+	else if (temp && temp.password==='0')              callback()
 	else if (!albums.json && !album.json) {
 
 		// Continue without password

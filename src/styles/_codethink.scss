@@ -1,0 +1,45 @@
+.header__sitetitle {
+    padding: 16px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    transition: border-color .3s, color .3s;
+    margin-left: 1em;
+    border: 1px solid rgba(255, 255, 255, .5);
+    padding: 5px;
+    vertical-align: 1px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5);
+    font-size: 70%;
+}
+
+.btn:hover {
+    border-color: #2293ec;
+    color: #2293ec;
+}
+
+.header__hostedwith {
+    &:hover {
+        background: none;
+    }
+
+    a {
+        border-radius: 100px;
+        padding: 3px 5px;
+        text-decoration: none;
+        color: #888;
+        font-weight: bold;
+    }
+
+    a:hover {
+        background-color: rgba(0, 0, 0, .3);
+    }
+}

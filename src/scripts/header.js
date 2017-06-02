@@ -46,7 +46,7 @@ header.bind = function() {
 	header.dom('.button_add')         .on(eventName, contextMenu.add)
 	header.dom('#button_more')        .on(eventName, function(e) { contextMenu.photoMore(photo.getID(), e) })
 	header.dom('#button_move')        .on(eventName, function(e) { contextMenu.move([ photo.getID() ], e) })
-	header.dom('.header__hostedwith') .on(eventName, function() { window.open(lychee.website) })
+	// header.dom('.header__hostedwith') .on(eventName, function() { window.open(lychee.website) })
 	header.dom('#button_trash_album') .on(eventName, function() { album.delete([ album.getID() ]) })
 	header.dom('#button_trash')       .on(eventName, function() { photo.delete([ photo.getID() ]) })
 	header.dom('#button_archive')     .on(eventName, function() { album.getArchive(album.getID()) })

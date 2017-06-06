@@ -70,7 +70,15 @@ gulp.task('view--svg', function() {
 	           }))
 	           .pipe(gulp.dest('../'))
 
- })
+})
+
+// cacheBuster looks at the css and js files and appends a hash to the
+// request to cause the file to get reloaded when the file changes.
+gulp.task('view--chachebust', ['view--scripts'], function () {
+    return gulp.src(paths.view.php)
+        .pipe(plugins.cacheBust())
+        .pipe(gulp.dest('../'));
+});
 
 /* Main ----------------------------------------- */
 
@@ -149,7 +157,15 @@ gulp.task('main--svg', function() {
 	           }))
 	           .pipe(gulp.dest('../'))
 
- })
+})
+
+// cacheBuster looks at the css and js files and appends a hash to the
+// request to cause the file to get reloaded when the file changes.
+gulp.task('main--chachebust', ['main--scripts', 'main--styles'], function () {
+    return gulp.src(paths.main.html)
+        .pipe(plugins.cacheBust())
+        .pipe(gulp.dest('../'));
+});
 
 /* Clean ----------------------------------------- */
 
@@ -163,7 +179,7 @@ gulp.task('clean', function() {
 
 /* Tasks ----------------------------------------- */
 
-gulp.task('default', ['view--svg', 'view--scripts', 'main--svg', 'main--scripts', 'main--styles'], function() {
+gulp.task('default', ['view--svg', 'view--scripts', 'view--chachebust', 'main--svg', 'main--scripts', 'main--styles', 'main--chachebust'], function() {
 
 	gulp.start('clean')
 

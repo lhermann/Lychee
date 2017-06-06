@@ -8,7 +8,7 @@
 		<meta name="author" content="Tobias Reich">
 
 		<!-- CSS -->
-		<link type="text/css" rel="stylesheet" href="dist/main.css">
+		<link type="text/css" rel="stylesheet" href="dist/main.css?v=e8d61a5e25edeabb7d324d731b597fcb">
 
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="src/images/apple-touch-icon-iphone.png" sizes="120x120">
@@ -71,7 +71,7 @@
 	</div>
 
 	<!-- JS -->
-	<script type="text/javascript" src="dist/view.js"></script>
+	<script type="text/javascript" src="dist/view.js?v=de01d7790f96ae59e4458e229fd27142"></script>
 
 	</body>
 </html>

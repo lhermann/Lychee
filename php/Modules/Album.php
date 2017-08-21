@@ -260,12 +260,6 @@ final class Album {
 				break;
 		}
 
-		// Check if album empty
-		if ($photos->num_rows==0) {
-			Log::error(Database::get(), __METHOD__, __LINE__, 'Could not create ZipArchive without images');
-			return false;
-		}
-
 		// Finish zip
 		$zip->close();
 
